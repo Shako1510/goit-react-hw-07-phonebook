@@ -3,13 +3,7 @@ import Contacts from "../Contacts/Contacts";
 import Filter from "../Filter/Filter";
 import { DivBox, TitleBox, SecondaryTitleBox } from "./AppStyled";
 
-
-
-
-
 export function App() {
-
-
 
   return (
     <DivBox>
