@@ -1,23 +1,20 @@
 
 import { ListContacts, ButtonDel } from './ContactsStyled';
-import { getContacts, getFilter } from 'redux/selectors';
+import { getContacts, getVisibleContact } from 'redux/selectors';
 import { useSelector, useDispatch } from 'react-redux';
 import { deleteContact } from 'redux/contactsSlice';
 
 const Contacts = () => {
-    const filters = useSelector(getFilter);
+
     const contacts = useSelector(getContacts);
     const dispatch = useDispatch();
 
-    const contactFiltering = () => {
+    // const contactFiltering = () => {
+    //     const normalizedFilter = filters.toLowerCase();
+    //     return contacts.filter(contact => contact.name.toLowerCase().includes(normalizedFilter))
+    // }
 
-        const normalizedFilter = filters.toLowerCase();
-        return contacts.filter(contact => contact.name.toLowerCase().includes(normalizedFilter))
-    }
-
-    const visibleContacts = contactFiltering();
-
-
+    const visibleContacts = useSelector(getVisibleContact);
 
     return (
         <ListContacts>
