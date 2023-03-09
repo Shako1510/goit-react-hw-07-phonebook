@@ -8,11 +8,11 @@ import { addContact } from 'redux/operation';
 export function Form() {
 
     const [name, setName] = useState('');
-    const [number, setNumber] = useState('');
+    const [number, setPhone] = useState('');
 
 
     const dispatch = useDispatch();
-    const contacts = useSelector(getContacts)
+    const contacts = useSelector(getContacts);
 
 
     const handleInputChange = e => {
@@ -22,7 +22,7 @@ export function Form() {
                 setName(value)
                 break;
             case 'number':
-                setNumber(value)
+                setPhone(value)
                 break;
             default:
                 console.log('incorrect input name');
@@ -36,9 +36,9 @@ export function Form() {
             return;
         }
 
-        dispatch(addContact(name, number));
+        dispatch(addContact({ name, number }));
         setName('');
-        setNumber('');
+        setPhone('');
 
     };
 
