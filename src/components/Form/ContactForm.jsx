@@ -1,8 +1,9 @@
-import { addContact } from '../../redux/contactsSlice'
+// import { addContact } from '../../redux/contactsSlice'
 import { useDispatch, useSelector } from 'react-redux';
 import { FormBox, ButtonAdd, InputBox, LabelBox } from './FormStyled';
 import { useState } from 'react';
 import { getContacts } from 'redux/selectors';
+import { addContact } from 'redux/operation';
 
 export function Form() {
 

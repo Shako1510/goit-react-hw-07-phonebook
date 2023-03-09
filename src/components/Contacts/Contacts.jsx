@@ -2,7 +2,7 @@
 import { ListContacts, ButtonDel } from './ContactsStyled';
 import { getContacts, getVisibleContact } from 'redux/selectors';
 import { useSelector, useDispatch } from 'react-redux';
-import { deleteContact } from 'redux/contactsSlice';
+import { deleteContact } from 'redux/operation';
 
 const Contacts = () => {
 
